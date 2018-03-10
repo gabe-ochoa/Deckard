@@ -13,6 +13,6 @@ Use cases:
 
 Syntax:
 
-`deckard target deployment my-app`
-`deckard target daemonset my-app`
+`deckard retire deployment my-app`
+`deckard retire daemonset my-app`
 

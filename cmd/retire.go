@@ -20,31 +20,30 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// targetCmd represents the target command
-var targetCmd = &cobra.Command{
-	Use:   "target",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
+// retireCmd represents the retire command
+var retireCmd = &cobra.Command{
+	Use:   "retire",
+	Short: "Retires a replicant or multiple replicants",
+	Long: `
 
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	- deckard retire frontend-85737-23423
+	- deckard retire deployment frontend
+	- deckard retire daemonset logging`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("target called")
+		fmt.Println("retire called")
 	},
 }
 
 func init() {
-	RootCmd.AddCommand(targetCmd)
+	RootCmd.AddCommand(retireCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// targetCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// retireCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// targetCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// retireCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
